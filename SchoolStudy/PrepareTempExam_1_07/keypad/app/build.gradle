@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.login'
+    namespace 'com.example.keypad'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.login"
+        applicationId "com.example.keypad"
         minSdk 24
         targetSdk 33
         versionCode 1
