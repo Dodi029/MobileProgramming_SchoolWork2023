@@ -27,6 +27,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/te"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -40,7 +41,8 @@
         android:columnCount="3"
         android:orientation="horizontal">
 
-        <TextView
+        <Button
+            android:id="@+id/btn"
             android:paddingLeft="40dp"
             android:paddingTop="10dp"
             android:paddingRight="40dp"
