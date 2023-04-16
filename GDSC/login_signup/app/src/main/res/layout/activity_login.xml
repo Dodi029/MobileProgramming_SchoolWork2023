@@ -3,49 +3,243 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/fullscreenBackgroundColor"
+    android:background="#FFFFFF"
     android:theme="@style/ThemeOverlay.Loginsignup.FullscreenContainer"
     tools:context=".LoginActivity">
 
-    <!-- The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc. -->
-    <TextView
-        android:id="@+id/fullscreen_content"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="?attr/fullscreenTextColor"
-        android:textSize="50sp"
-        android:textStyle="bold" />
-
-    <!-- This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows. -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="@style/Widget.Theme.Loginsignup.ButtonBar.Fullscreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
+                android:id="@+id/back"
+                android:layout_weight="1.7"
+                android:text="back"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2"
+                android:text="회원가입"
+                android:textColor="@color/purple_200"
+                android:textSize="25dp"/>
         </LinearLayout>
-    </FrameLayout>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signNametext"
+                android:layout_marginBottom="5dp"
+                android:text="이름"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/signName"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/box_id"
+                android:ems="10"
+                android:hint=" 이름"
+                android:inputType="textPersonName"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signIDtext"
+                android:layout_marginBottom="5dp"
+                android:text="아이디"
+                android:textColor="@color/purple_200"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/signID"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/box_id"
+                android:ems="10"
+                android:hint=" 아이디"
+                android:inputType="textPersonName"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signBirthtext"
+                android:layout_marginBottom="5dp"
+                android:text="생년월일"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/signBirth"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint=" 년(4자)"
+                    android:inputType="textPersonName"
+                    android:text=""/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/signBirth2"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint=" 월"
+                    android:inputType="textPersonName"
+                    android:text=""/>
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/signBirth3"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint=" 일"
+                    android:inputType="textPersonName"
+                    android:text=""/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signPWtext"
+                android:layout_marginBottom="5dp"
+                android:text="비밀번호"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/signPW"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/box_id"
+                android:ems="10"
+                android:hint=" 비밀번호"
+                android:inputType="textPassword"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signPW2text"
+                android:layout_marginBottom="5dp"
+                android:text="비밀번호 확인"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:id="@+id/signPW2"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/box_id"
+                    android:ems="10"
+                    android:hint=" 비밀번호 다시 입력"
+                    android:inputType="textPassword"
+                    android:text=""/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pwcheckbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/box_login"
+                    android:text="확인"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signmailtext"
+                android:layout_marginBottom="5dp"
+                android:text="이메일"
+                android:textColor="@color/purple_200"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/signmail"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:background="@drawable/box_id"
+                android:hint=" 이메일"
+                android:inputType="textPersonName"
+                android:text=""/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signupbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/box_login"
+                    android:text="회원가입"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 </FrameLayout>
