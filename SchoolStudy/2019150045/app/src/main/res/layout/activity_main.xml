@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".CalActivity">
+
+    <TextView
+        android:text="학과: 컴퓨터공학부\n학번: 2019150045\n이름: 한건희"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/calBtn"
+        android:text="@string/cal"
+        android:textSize="20sp"
+        android:textColor="@color/btn_click"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
