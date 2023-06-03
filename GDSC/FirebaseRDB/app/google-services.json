@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "686689750863",
+    "project_id": "gdsc-chat-dodi",
+    "storage_bucket": "gdsc-chat-dodi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686689750863:android:82731eb039098294c77f3a",
+        "android_client_info": {
+          "package_name": "com.example.firebaserdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686689750863-e5vgspkbsdhq1jteg4kurhksnbcaeuom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcR5qwadEoA07DbaUGRh1HbIId4CJfL6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686689750863-e5vgspkbsdhq1jteg4kurhksnbcaeuom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
