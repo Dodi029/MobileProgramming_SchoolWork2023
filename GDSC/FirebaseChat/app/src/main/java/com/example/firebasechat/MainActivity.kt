@@ -83,7 +83,7 @@ fun ChatApp() {
             val newMessageRef = messagesRef.push()
             val newMessage = Message(text = it, userId = "user1")
             newMessageRef.setValue(newMessage)
-            newMessageText.value = ""
+            newMessageText.value = it
         })
     }
 }
