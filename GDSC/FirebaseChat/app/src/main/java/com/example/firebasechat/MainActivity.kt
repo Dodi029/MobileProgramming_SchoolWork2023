@@ -35,8 +35,6 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     ChatApp()
-
-
                 }
             }
         }
@@ -87,7 +85,7 @@ fun ChatApp() {
         })
     }
 }
-
+// 오브젝트를 묶으면 좋아보임
 @Composable
 fun MessageList(messages: List<Message>) {
     LazyColumn {
