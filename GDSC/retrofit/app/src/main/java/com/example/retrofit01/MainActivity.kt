@@ -2,6 +2,8 @@ package com.example.retrofit01
 
 import android.os.Bundle
 import android.telecom.Call
+import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,6 +17,8 @@ import com.example.retrofit01.ui.theme.Retrofit01Theme
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.annotations.SerializedName
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
@@ -30,7 +34,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
                 }
             }
         }
@@ -52,6 +55,25 @@ object DataClass {          // 사이트에서 제공되는 데이터 모델을 
                     "page : $page\n" +
                     "perPage : $perPage\n" +
                     "totalCount : $totalCount"
+        }
+        private fun getVaccineStatus() {
+
+            RetrofitObject.getApiService().getInfo(
+                1, 10
+            ).enqueue(object : Callback<VaccineBody> {
+                override fun onResponse(
+                    call: Call<DataClass.VaccineBody>,
+                    response: Response<DataClass.VaccineBody>
+                ) {
+                    setResponseText(response.code(), response.body())
+                    Toast.makeText(baseContext, "success", Toast.LENGTH_SHORT).show()
+                }
+
+                override fun onFailure(call: Call<DataClass.VaccineBody>, t: Throwable) {
+                    Log.e("retrofit onFailure", "${t.printStackTrace()}")
+                    Toast.makeText(baseContext, "fail", Toast.LENGTH_SHORT).show()
+                }
+            })
         }
     }
 
@@ -102,4 +124,4 @@ object RetrofitObject {         // Retrofit을 사용하기 위해 Retrofit 객�
     fun getApiService(): ApiService {
         return getRetrofit().create(ApiService::class.java)
     }
-}
+}\
