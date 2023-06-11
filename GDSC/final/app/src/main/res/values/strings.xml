@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">final</string>
+    <string name="drawer_open">5</string>
+    <string name="drawer_close">5</string>
+</resources>
