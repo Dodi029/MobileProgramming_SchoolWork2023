@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jobscheduler"
         tools:targetApi="31">
+        <service
+            android:name=".MyJobService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"></service>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
