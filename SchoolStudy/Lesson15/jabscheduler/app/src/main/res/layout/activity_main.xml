@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Start Job Service"
+        android:id="@+id/start_job_service"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Cancel Job Service"
+        android:id="@+id/cancel_job_service"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_text"
+        android:gravity="center"
+        android:text="result"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
